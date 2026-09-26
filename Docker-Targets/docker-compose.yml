@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  juiceshop:
+    image: bkimminich/juice-shop
+    container_name: vulnlab_juiceshop
+    ports:
+      # Cấu trúc: "IP_Host:Port_Host:Port_Container"
+      # Bind vào 127.0.0.1 để ngăn mạng ngoài truy cập
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    networks:
+      - vulnlab_isolated_net
+
+networks:
+  vulnlab_isolated_net:
+    driver: bridge
+    # Không expose ra bên ngoài
+    internal: false
