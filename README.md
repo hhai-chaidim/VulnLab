@@ -568,7 +568,7 @@ This project is intended for cybersecurity education and authorized security tes
 Computer Networks and Data Communications Student
 Cybersecurity | Vulnerability Research | Network Security
 
-* GitHub: [YOUR_GITHUB_PROFILE](https://github.com/hhai-chaidim)
+* GitHub: [MY_GITHUB_PROFILE](https://github.com/hhai-chaidim)
 
 ---
 
