@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  cmd-lab:
+    build: .
+    container_name: vulnlab_cmd_injection
+    ports:
+      # Tiếp tục nguyên tắc an toàn: Chỉ mở cổng cho máy host (127.0.0.1)
+      - "127.0.0.1:5000:5000"
+    restart: unless-stopped
