@@ -1,10 +1,10 @@
-# VulnLab — CVE Research & Exploitation Lab
+﻿# VulnLab â€” CVE Research & Exploitation Lab
 
 A hands-on cybersecurity project focused on vulnerability research, CVE analysis, controlled exploitation, and HTTP traffic analysis.
 
 > **Project status:** In Development
 > **Project type:** Personal Cybersecurity Portfolio
-> **Focus areas:** Vulnerability Research · CVE Analysis · Web Security · HTTP Traffic Analysis · Security Testing
+> **Focus areas:** Vulnerability Research Â· CVE Analysis Â· Web Security Â· HTTP Traffic Analysis Â· Security Testing
 
 ---
 
@@ -184,59 +184,59 @@ The architecture may evolve as additional CVE-specific targets are introduced.
 
 ```text
 vulnlab-cve-research/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── docs/
-│   ├── architecture.md
-│   ├── lab-setup.md
-│   ├── methodology.md
-│   └── glossary.md
-│
-├── lab/
-│   ├── docker-compose.yml
-│   ├── .env.example
-│   └── README.md
-│
-├── research/
-│   └── CVE-YYYY-NNNNN/
-│       ├── cve-summary.md
-│       ├── nvd-analysis.md
-│       ├── cvss-analysis.md
-│       ├── vendor-advisory.md
-│       ├── poc-analysis.md
-│       └── references.md
-│
-├── traffic/
-│   └── README.md
-│
-├── evidence/
-│   └── CVE-YYYY-NNNNN/
-│       ├── screenshots/
-│       ├── request-response/
-│       └── hashes.txt
-│
-├── tests/
-│   ├── test-plan.md
-│   └── test-results.md
-│
-├── remediation/
-│   ├── mitigation.md
-│   └── validation.md
-│
-├── reports/
-│   └── final-report.md
-│
-└── cve-notebook/
-    ├── models.py
-    ├── storage.py
-    ├── cli.py
-    ├── report.py
-    ├── hashing.py
-    ├── requirements.txt
-    └── tests/
+â”‚
+â”œâ”€â”€ README.md
+â”œâ”€â”€ LICENSE
+â”œâ”€â”€ .gitignore
+â”‚
+â”œâ”€â”€ docs/
+â”‚   â”œâ”€â”€ architecture.md
+â”‚   â”œâ”€â”€ lab-setup.md
+â”‚   â”œâ”€â”€ methodology.md
+â”‚   â””â”€â”€ glossary.md
+â”‚
+â”œâ”€â”€ lab/
+â”‚   â”œâ”€â”€ docker-compose.yml
+â”‚   â”œâ”€â”€ .env.example
+â”‚   â””â”€â”€ README.md
+â”‚
+â”œâ”€â”€ research/
+â”‚   â””â”€â”€ CVE-YYYY-NNNNN/
+â”‚       â”œâ”€â”€ cve-summary.md
+â”‚       â”œâ”€â”€ nvd-analysis.md
+â”‚       â”œâ”€â”€ cvss-analysis.md
+â”‚       â”œâ”€â”€ vendor-advisory.md
+â”‚       â”œâ”€â”€ poc-analysis.md
+â”‚       â””â”€â”€ references.md
+â”‚
+â”œâ”€â”€ traffic/
+â”‚   â””â”€â”€ README.md
+â”‚
+â”œâ”€â”€ evidence/
+â”‚   â””â”€â”€ CVE-YYYY-NNNNN/
+â”‚       â”œâ”€â”€ screenshots/
+â”‚       â”œâ”€â”€ request-response/
+â”‚       â””â”€â”€ hashes.txt
+â”‚
+â”œâ”€â”€ tests/
+â”‚   â”œâ”€â”€ test-plan.md
+â”‚   â””â”€â”€ test-results.md
+â”‚
+â”œâ”€â”€ remediation/
+â”‚   â”œâ”€â”€ mitigation.md
+â”‚   â””â”€â”€ validation.md
+â”‚
+â”œâ”€â”€ reports/
+â”‚   â””â”€â”€ final-report.md
+â”‚
+â””â”€â”€ cve-notebook/
+    â”œâ”€â”€ models.py
+    â”œâ”€â”€ storage.py
+    â”œâ”€â”€ cli.py
+    â”œâ”€â”€ report.py
+    â”œâ”€â”€ hashing.py
+    â”œâ”€â”€ requirements.txt
+    â””â”€â”€ tests/
 ```
 
 The `CVE-YYYY-NNNNN` directory is a placeholder and will be replaced with the identifier of the vulnerability being researched.
@@ -260,7 +260,7 @@ VirtualBox or VMware may be installed if a dedicated Kali Linux VM or a separate
 
 ```bash
 git clone https://github.com/hhai-chaidim/VulnLab.git
-cd VunlnLab
+cd VulnLab
 ```
 
 Replace `hhai-chaidim` with your GitHub username.
@@ -326,15 +326,15 @@ For additional targets, follow the setup instructions documented in the correspo
 
 Each vulnerability will be investigated using a consistent workflow.
 
-### Step 1 — Identify the Vulnerability
+### Step 1 â€” Identify the Vulnerability
 
 Find a suitable CVE using trusted vulnerability databases, vendor advisories, and technical references.
 
-### Step 2 — Verify Affected Versions
+### Step 2 â€” Verify Affected Versions
 
 Identify the affected product, vulnerable versions, fixed versions, and relevant configuration requirements.
 
-### Step 3 — Analyze CVSS
+### Step 3 â€” Analyze CVSS
 
 Record:
 
@@ -350,25 +350,25 @@ Record:
 
 CVSS severity is not a complete assessment of risk in a specific environment. Environmental context and exposure must also be considered.
 
-### Step 4 — Review the Vendor Advisory
+### Step 4 â€” Review the Vendor Advisory
 
 Read the official advisory to understand the root cause, affected configurations, remediation, and any known limitations.
 
-### Step 5 — Analyze the PoC
+### Step 5 â€” Analyze the PoC
 
 Inspect the source code, dependencies, input parameters, and expected behavior before executing anything.
 
-### Step 6 — Reproduce the Vulnerability
+### Step 6 â€” Reproduce the Vulnerability
 
 Use only the isolated target configured for the selected CVE.
 
 Record the environment, steps, observations, and supporting evidence.
 
-### Step 7 — Validate Remediation
+### Step 7 â€” Validate Remediation
 
 Where feasible, repeat the test against a patched version or apply the recommended mitigation.
 
-### Step 8 — Write the Report
+### Step 8 â€” Write the Report
 
 Document the findings, impact, evidence, remediation, and limitations.
 
@@ -506,7 +506,7 @@ This project is intended for cybersecurity education and authorized security tes
 
 ## Project Roadmap
 
-### Phase 1 — Lab Setup
+### Phase 1 â€” Lab Setup
 
 * [x] Define project scope and architecture.
 * [ ] Set up the local development environment.
@@ -514,14 +514,14 @@ This project is intended for cybersecurity education and authorized security tes
 * [ ] Document lab setup and isolation.
 * [ ] Capture initial HTTP traffic.
 
-### Phase 2 — CVE Research
+### Phase 2 â€” CVE Research
 
 * [ ] Identify candidate CVEs.
 * [ ] Verify affected versions and vendor advisories.
 * [ ] Document CVSS scores and vectors.
 * [ ] Select the first CVE for hands-on research.
 
-### Phase 3 — PoC and Validation
+### Phase 3 â€” PoC and Validation
 
 * [ ] Review the selected PoC.
 * [ ] Deploy the vulnerable target.
@@ -529,7 +529,7 @@ This project is intended for cybersecurity education and authorized security tes
 * [ ] Record request/response evidence.
 * [ ] Test remediation or a patched version.
 
-### Phase 4 — CVE Lab Notebook
+### Phase 4 â€” CVE Lab Notebook
 
 * [ ] Implement data models.
 * [ ] Implement JSON storage.
@@ -538,7 +538,7 @@ This project is intended for cybersecurity education and authorized security tes
 * [ ] Generate Markdown reports.
 * [ ] Write unit tests.
 
-### Phase 5 — Portfolio Release
+### Phase 5 â€” Portfolio Release
 
 * [ ] Complete the technical report.
 * [ ] Review repository security and remove sensitive data.
@@ -552,9 +552,9 @@ This project is intended for cybersecurity education and authorized security tes
 
 * [National Vulnerability Database (NVD)](https://nvd.nist.gov/)
 * [CVE Program](https://www.cve.org/)
-* [FIRST — Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/)
+* [FIRST â€” Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/)
 * [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
-* [OWASP Juice Shop — GitHub Repository](https://github.com/juice-shop/juice-shop)
+* [OWASP Juice Shop â€” GitHub Repository](https://github.com/juice-shop/juice-shop)
 * [PortSwigger Web Security Academy](https://portswigger.net/web-security)
 * [Burp Suite Community Edition](https://portswigger.net/burp/communitydownload)
 * [Docker Documentation](https://docs.docker.com/)
@@ -573,3 +573,4 @@ Cybersecurity | Vulnerability Research | Network Security
 ---
 
 *This project is continuously evolving as new research, lab exercises, and validation results are added.*
+

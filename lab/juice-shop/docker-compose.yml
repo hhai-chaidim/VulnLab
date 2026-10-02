@@ -1,0 +1,23 @@
+services:
+  juiceshop:
+    image: bkimminich/juice-shop:${JUICE_SHOP_TAG:-latest}
+    container_name: vulnlab_juiceshop
+    ports:
+      # C? ph?p: IP_host:Port_host:Port_container
+      # 127.0.0.1 = ch? m?y b?n truy c?p ???c, m?ng LAN v? Internet th? kh?ng
+      - "127.0.0.1:3000:3000"
+    restart: "no"
+    networks:
+      - vulnlab_net
+    mem_limit: 1g
+    cpus: 1.0
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+networks:
+  vulnlab_net:
+    # M?ng bridge ri?ng. L?p c? l?p th?t s? l? 127.0.0.1 ? ph?n ports,
+    # kh?ng ph?i c?u h?nh m?ng n?y.
+    driver: bridge

@@ -1,0 +1,36 @@
+# Bi?n m?i tr??ng v? b? m?t
+.env
+*.env
+!.env.example
+*.key
+*.pem
+*.token
+
+# Burp Suite v? b?t g?i tin (c? th? ch?a cookie/token)
+*.burp
+*.pcap
+*.pcapng
+*.har
+
+# Evidence th?, ch?a che th?ng tin nh?y c?m
+evidence/**/raw/
+
+# M?y ?o v? disk image
+*.vmdk
+*.vdi
+*.ova
+*.iso
+*.vmem
+*.vmsd
+*.vmsn
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# H? ?i?u h?nh v? editor
+Thumbs.db
+.DS_Store
+.vscode/
