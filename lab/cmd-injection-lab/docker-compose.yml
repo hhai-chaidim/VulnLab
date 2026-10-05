@@ -1,9 +1,32 @@
-version: '3.8'
 services:
   cmd-lab:
     build: .
     container_name: vulnlab_cmd_injection
     ports:
-      # Tiếp tục nguyên tắc an toàn: Chỉ mở cổng cho máy host (127.0.0.1)
+      # AN TOÀN: Chỉ bind 127.0.0.1 — máy trong LAN/Internet KHÔNG truy cập được
       - "127.0.0.1:5000:5000"
-    restart: unless-stopped
+
+    # "no" = không tự khởi động lại. Lab chỉ chạy khi bạn chủ động bật.
+    # (unless-stopped sẽ tự bật lại mỗi khi Docker Desktop khởi động → nguy hiểm)
+    restart: "no"
+
+    networks:
+      - vulnlab_net
+
+    # Giới hạn tài nguyên: container nhỏ, không cần nhiều
+    mem_limit: 256m
+    cpus: 0.5
+
+    # Ngăn process trong container leo thang đặc quyền (setuid, execve trick)
+    security_opt:
+      - no-new-privileges:true
+
+    # LƯU Ý: KHÔNG dùng cap_drop: ALL cho lab này.
+    # Lý do: Lab cần thực thi lệnh shell (os.popen) — đó chính là lỗ hổng
+    # cần tái hiện. Drop ALL sẽ phá vỡ chức năng lab.
+    # Thay vào đó, cô lập bằng: 127.0.0.1 + network riêng + no-new-privileges.
+
+networks:
+  vulnlab_net:
+    # Bridge network riêng, tách biệt khỏi network mặc định của Docker
+    driver: bridge
