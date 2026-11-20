@@ -1,4 +1,4 @@
-# Bi?n m?i tr??ng v? b? m?t
+# Bien moi truong bi mat
 .env
 *.env
 !.env.example
@@ -6,16 +6,16 @@
 *.pem
 *.token
 
-# Burp Suite v? b?t g?i tin (c? th? ch?a cookie/token)
+# Burp Suite va bat goi tin (co the chua cookie/token)
 *.burp
 *.pcap
 *.pcapng
 *.har
 
-# Evidence th?, ch?a che th?ng tin nh?y c?m
+# Evidence tho, chua che thon tin nhay cam
 evidence/**/raw/
 
-# M?y ?o v? disk image
+# May ao va disk image
 *.vmdk
 *.vdi
 *.ova
@@ -30,7 +30,12 @@ __pycache__/
 .venv/
 venv/
 
-# H? ?i?u h?nh v? editor
+# He dieu hanh va editor
 Thumbs.db
 .DS_Store
 .vscode/
+
+#
+*.log
+*.sqlite
+*.db
